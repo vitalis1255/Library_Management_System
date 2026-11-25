@@ -8,13 +8,13 @@
   </head>
   <body>
     {# Get a member username #}
-    {% if session.get('username') %}
+    {% if session.get('email') %}
     <div class="navigationBar">
       <div class="portal">
         <h4>Library Management System Portal</h4>
       </div>
       <div class="user-profile">
-        <span>Username: <strong>{{ session.get('username') }}</strong>({{ session.get('role') }})</span>
+        <span>User Info: <strong>{{ session.get('email') }}</strong>({{ session.get('phone') }})</span>
         <a href="{{url_for('logout')}}" class="logout-btn">Logout</a>
       </div>
     </div>
