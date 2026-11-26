@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %}update book info{% endblock %}
+
+{% block content %}
+<h4>Update Book Information</h4>
+<div class="update-book-info">
+  <form method="POST">
+    {{ update_form.hidden_tag() }}
+
+    {{ update_form.book_id.label }}
+    {{ update_form.book_id(placeholder="Enter book id") }}
+
+    {{ update_form.book_title.label }}
+    {{ update_form.book_title(placeholder="Enter book title",autocomplete="off") }}
+
+    {{ update_form.author.label }}
+    {{ update_form.author(placeholder="Enter author's name",autocomplete="off") }}
+
+    {{ update_form.isbn.label }}
+    {{ update_form.isbn(placeholder="Enter book's ISBN number") }}
+
+    {{ update_form.category.label }}
+    {{ update_form.category(placeholder="Enter book category",autocomplete="off") }}
+
+    {{ update_form.publisher.label }}
+    {{ update_form.publisher(placeholder="Enter publisher name",autocomplete="off") }}
+
+    {{ update_form.publication_year.label }}
+    {{ update_form.publication_year(placeholder="Enter publication year") }}
+
+    {{ update_form.total_no_copies.label }}
+    {{ update_form.total_no_copies(placeholder="Enter total number of copies") }}
+
+    {{ update_form.submit(class="btn") }}
+  </form>
+</div>
+{% endblock %}
