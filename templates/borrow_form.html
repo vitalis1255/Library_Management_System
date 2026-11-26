@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}borrow book{% endblock %}
+
+{% block content %}
+<h4>Borrow Book Registration Portal</h4>
+<div class="borrow-book">
+  <form method="POST">
+    {{ form.hidden_tag() }}
+
+    {{ form.member_id.label }}
+    {{ form.member_id(placeholder="Enter member id") }}
+
+    {{ form.book_id.label() }}
+    {{ form.book_id(placeholder="Enter book id") }}
+
+    {{ form.borrow_date.label }}
+    {{ form.borrow_date(placeholder="Enter date book was borrowed") }}
+
+    {{ form.due_date.label }}
+    {{ form.due_date(placeholder="Enter expected book return date") }}
+
+    {{ form.submit(class="btn") }}
+  </form>
+</div>
+{% endblock %}

@@ -7,7 +7,7 @@ app.secret_key = "libray_management_system_190877_by_wtforms"
 @app.route("/")
 def index():
   """This is Home Page"""
-  return render_template("member_login.html")
+  return redirect("member_login")
 
 
 

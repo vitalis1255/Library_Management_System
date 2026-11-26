@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Admin Login{% endblock %}
+
+{% block content %}
+<h4>Admin Login Portal</h4>
+<div class="admin-login-page">
+  <form method="POST">
+    {{ form_admin.hidden_tag() }}
+
+    {{ form_admin.username.label }}
+    {{ form_admin.username(placeholder="Enter your username",autocomplete="off") }}
+
+    {{ form_admin.password.label }}
+    {{ form_admin.password(placeholder="Enter your password") }}
+
+    <input type="submit" name="submit-admin-login" value="Admin Login" class="btn">
+  </form>
+</div>
+{% endblock %}

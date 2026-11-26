@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Admin Registration{% endblock %}
+
+{% block content %}
+<h4>Admin Registration Portal</h4>
+<div class="admin-account-creation">
+  {{ admin_form.hidden_tag() }}
+
+  {{ admin_form.username.label }}
+  {{ admin_form.username(placeholder="Create Username") }}
+
+  {{ admin_form.password.label }}
+  {{ admin_form.password(placeholder="Create Password") }}
+
+  {{ admin_form.confirm_password.label }}
+  {{ admin_form.confirm_password(placeholder="confirm your password") }}
+
+  <input type="submit" name="submit-admin" value="Register Admin" class="btn">
+</div>
+{% endblock %}

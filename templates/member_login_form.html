@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Member Login{% endblock %}
+
+{% block content %}
+<div class="member-login">
+  <div class="member-admin">
+    <div class="member-h3">
+      <h4>Library Member Login</h4>
+    </div>
+    <div class="admin-login-link">
+      <a href="{{url_for('admin_dashboard')}}">Admin Login</a>
+    </div>
+  </div>
+  <form method="POST">
+    {{ form.hidden_tag() }}
+
+    {{ form.email.label }}
+    {{ form.email(placeholder="e.g izu@gmail.com") }}
+
+    {{ form.phone.label }}
+    {{ form.phone(placeholder="e.g 08066023002") }}
+
+    <input type="submit" name="member-login-portal" value="Member Login" class="btn">
+  </form>
+</div>
+{% endblock %}
