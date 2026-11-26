@@ -4,6 +4,16 @@
 {% block content %}
 <h4>Return Book Registration Portal</h4>
 <div class="return-book">
-  
+  <form method="POST">
+    {{ form.hidden_tag() }}
+
+    {{ form.borrow_id.label }}
+    {{ form.borrow_id(placeholder="Enter borrow id") }}
+
+    {{ form.return_date.label }}
+    {{ form.return_date(placeholder="Enter return date") }}
+
+    {{ form.submit(class="btn") }}
+  </form>
 </div>
 {% endblock %}
