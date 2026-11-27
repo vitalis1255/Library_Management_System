@@ -9,6 +9,9 @@
   <div class="create-admin">
     <a href="{{url_for('admin_register')}}">Register Admin</a>
   </div>
+  <div class="view-registered-library-members">
+    <a href="{{url_for('registered_members')}}">View Library Registered Members</a>
+  </div>
 </div>
 <div class="admin-dash">
   <form method="POST">
@@ -61,6 +64,7 @@
   </form>
 
   {# 3 Action Buttons(View,Edit,Delete) #}
+  <h4>Action Buttons</h4>
   <div class="view-edit-delete-buttons">
     <div class="view">
       <button>

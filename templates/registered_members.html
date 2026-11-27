@@ -2,7 +2,21 @@
 {% block title %}library registered members{% endblock %}
 
 {% block content %}
+<div class="registered-members-admin-view">
+  <div class="registered-h4">
+    <h4>Library Registered Members</h4>
+  </div>
+  <div class="admin-dashboard-back">
+    <a href="{{url_for('admin_dashboard')}}">Back to Admin Dashboard</a>
+  </div>
+</div>
 <div class="registered-members">
-  
+  {% for member in members %}
+  {% if member %}
+  <ol class="members-list">
+    <li>{{ member }}</li>
+  </ol>
+  {% endif %}
+  {% endfor %}
 </div>
 {% endblock %}

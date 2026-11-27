@@ -2,18 +2,28 @@
 {% block title %}view all books{% endblock %}
 
 {% block content %}
-<h4>Admin View All books Portal</h4>
+<div class="available-books">
+  <div class="available-h4">
+    <h4>View Available Books Portal</h4>
+  </div>
+  <div class="view-book-details">
+    <a href="{{url_for('book_details')}}">Book Details</a>
+  </div>
+</div>
 {% for book in books %}
 {% if book %}
 <div class="view-all-books">
-  <strong>{{ book.get('book_title') }}</strong>|
-  <strong>{{ book.get('author') }}</strong>|
-  <strong>{{ book.get('isbn') }}</strong>|
-  <strong>{{ book.get('category') }}</strong>|
-  <strong>{{ book.get('publisher') }}</strong>|
-  <strong>{{ book.get('publication_year') }}</strong>|
-  <strong>{{ book.get('total_no_copies') }}</strong>|
-  <strong>{{ book.get('available_copies') }}</strong>
+  <span><strong>{{ book.get('book_id') }}</strong></span>|
+  <span><strong>{{ book.get('book_title') }}</strong></span>|
+  <span><strong>{{ book.get('author') }}</strong></span>|
+  <span><strong>{{ book.get('isbn') }}</strong></span>|
+  <span><strong>{{ book.get('category') }}</strong></span>|
+  <span><strong>{{ book.get('publisher') }}</strong></span>|
+  <span><strong>{{ book.get('publication_year') }}</strong></span>|
+  <span><strong>{{ book.get('total_no_copies') }}</strong></span>|
+  <span><strong>{{ book.get('available_copies') }}</strong></span>|
+  <span><strong>{{ book.get('borrowed_copies') }}</strong></span>|
+  <span><strong>{{ book.get('book_status') }}</strong></span>
 </div>
 {% endif %}
 {% endfor %}
