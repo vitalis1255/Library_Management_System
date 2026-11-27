@@ -5,7 +5,21 @@
 <h4>Search Book Portal</h4>
 <div class="search-book">
   <form method="POST">
-    
+    {{ search_form.hidden_tag() }}
+
+    {{ search_form.book_title.label }}
+    {{ search_form.book_title(placeholder="Enter book title",autocomplete="off") }}
+
+    {{ search_form.author.label }}
+    {{ search_form.author(placeholder="Enter author's name",autocomplete="off") }}
+
+    {{ search_form.isbn.label }}
+    {{ search_form.isbn(placeholder="Enter book's ISBN number") }}
+
+    {{ search_form.category.label }}
+    {{ search_form.category(placeholder="Enter book category") }}
+
+    {{ search_form.submit(class="btn") }}
   </form>
 </div>
 {% endblock %}

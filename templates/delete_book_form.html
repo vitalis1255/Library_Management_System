@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}delete book{% endblock %}
+
+{% block content %}
+<h4>Delete Book Portal</h4>
+<div class="delete-book">
+  <form method="POST">
+    {{ form.hidden_tag() }}
+
+    {{ form.book_id.label }}
+    {{ form.book_id(placeholder="Enter book id") }}
+
+    {{ form.submit(class="btn") }}
+  </form>
+</div>
+{% endblock %}
